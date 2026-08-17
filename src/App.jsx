@@ -4,6 +4,7 @@ import './App.css'
 import Header from './Components/Header/header'
 import Hero from './Components/Hero/hero'
 import Footer from './Components/Footer/footer'
+import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
