@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { BrowserRouter } from 'react-router-dom'
 import './App.css'
 import Header from './Components/Header/header'
-import Footer from './Components/Footer/Footer'
+import Footer from './Components/Footer/footer'
 import Banner from './Components/Banner/Banner'
 import DisplayRow from './Components/DisplayRow/DisplayRow'
 
