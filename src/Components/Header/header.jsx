@@ -1,10 +1,13 @@
-import React from 'react'
+import React, {useState} from 'react'
+
 import { Link } from 'react-router-dom'
 import { Search, Bell, User, ChevronDown } from 'lucide-react'
 import style from './Header.module.css'
 import logo from '../../assets/image/logo.png'
 
 function Header() {
+    const [isSearchOpen, setIsSearchOpen] = useState(false);
+
     return (
         <header className={style.header}>
             <div className={style.Container}>
@@ -22,20 +25,24 @@ function Header() {
                 {/* right side section */}
                 <div className={style.rightSection}>
                     <div className={style.searchContainer}>
-                        <button className={style.searchButton}>
+                        <button onClick={() => setIsSearchOpen(!isSearchOpen)} className={style.searchButton}>
                             {/* search */}
-                            <Search />
+                            <Search size={20} />
                         </button>
+                        {isSearchOpen && (
+                            <input type="text" placeholder="Search..." className={style.searchInput} />
+                        )}
                     </div>
                     <button className={style.notificationButton}>
                         {/* notifications */}
-                        <Bell />
+                        <Bell size={20} />
+                        <span className={style.notificationCount}>5</span>
                     </button>
                     <button className={style.profileButton}>
                         {/* profile */}
                         <div className={style.profileContainer}>
-                            <User />
-                            <ChevronDown />
+                            <User size={20} />
+                            <ChevronDown size={20} />
                         </div>
                     </button>
                 </div>

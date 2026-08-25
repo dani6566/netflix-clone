@@ -2,9 +2,10 @@ import { useState } from 'react'
 import { BrowserRouter } from 'react-router-dom'
 import './App.css'
 import Header from './Components/Header/header'
-import Hero from './Components/Hero/hero'
-import Footer from './Components/Footer/footer'
+import Footer from './Components/Footer/Footer'
 import './App.css'
+import Banner from './Components/Banner/Banner'
+import DisplayRow from './Components/DisplayRow/DisplayRow'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -13,8 +14,9 @@ function App() {
     <>
       <BrowserRouter>
         <Header />
-        {/* <Hero />
-        <Footer /> */}
+        <Banner />
+        <DisplayRow />
+        <Footer />
       </BrowserRouter>
 
     </>
