@@ -6,7 +6,7 @@ import {
     FaYoutube,
 } from "react-icons/fa";
 
-import styles from "./Footer.module.css";
+import styles from "./footer.module.css";
 
 const socialLinks = [
     {
